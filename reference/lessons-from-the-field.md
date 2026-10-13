@@ -75,9 +75,12 @@ same `LFF-NN` appears in as many rows as its **Owning phases** line names.
 **Severity:** 2
 **Owning phases:** assessment, deployment
 **Sources:**
-- Sift Engineering, *Migrating our cloud infrastructure to Google Cloud (Part 1/4)*, ~2019 — <https://engineering.sift.com/gcp-data-mig-1/>
+- Sift Engineering, *Migrating our cloud infrastructure to Google Cloud (Part 1/4)*, ~2019 — <https://sift.com/engineering/gcp-data-migration-1/>
+- Sift Engineering, *Evaluating Cloud Bigtable (Part 2/4)* — <https://sift.com/engineering/gcp-data-migration-2/>
+- Sift Engineering, *Planning a Zero Downtime Data Migration (Part 3/4)* — <https://sift.com/engineering/gcp-data-migration-3/> (dual-write, validation, and dedicated interconnect cost)
+- Sift Engineering, *Lessons Learned From Bigtable Data Migration (Part 4/4)* — <https://sift.com/engineering/gcp-data-migration-4/>
 - HN discussion: *Sift migrated petabyte-scale HBase from AWS to Bigtable with zero downtime*, 2020 — <https://news.ycombinator.com/item?id=22329216>
-- Sift Engineering, on dedicated interconnect cost — same series
+- Reddit discussions: [r/googlecloud on Part 1](https://www.reddit.com/r/googlecloud/comments/f3z2wn/), [r/googlecloud on Part 3](https://www.reddit.com/r/googlecloud/comments/f7fei3/), and the [r/bprogramming cross-post](https://www.reddit.com/r/bprogramming/comments/f3zkub/).
 
 **What practitioners report.** At PB scale, the only safe pattern Sift could find was dual-write + shadow-read for weeks before switching reads to the target. They also reported that a vendor-implemented dedicated cloud interconnect was roughly 5× cheaper than open-internet egress for the same volume.
 
